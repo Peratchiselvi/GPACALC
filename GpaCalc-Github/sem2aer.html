@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>Semester 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="gpa.css">
+        <script>
+                function display(){
+                let eng = document.getElementById("eng").value;
+                let mat = document.getElementById("mat").value;
+                let phy = document.getElementById("phy").value;
+                let evs = document.getElementById("evs").value;
+                let c = document.getElementById("c").value;
+                let beee = document.getElementById("beee").value;
+                let epllab = document.getElementById("epllab").value;
+                let clab = document.getElementById("clab").value;
+                let emlab = document.getElementById("emlab").value;
+                if(eng==0){
+                    engc = 0;
+                }
+                else{
+                    engc = 4;
+                }
+                if(mat == 0){
+                    matc = 0;  
+                }else{
+                    matc = 3;
+                }
+                if(phy == 0){
+                    phyc = 0;
+                }
+                else{
+                    phyc = 3;
+                }
+                if(evs == 0){
+                    evsc = 0;
+                }
+                else{
+                    evsc = 3;
+                }
+                if(c == 0){
+                    cc = 0;
+                }else{
+                    cc = 3;
+                }
+                if(beee == 0){
+                    beeec = 0;
+                }else{
+                    beeec = 4;
+                }
+                if(epllab == 0){
+                    epllabc = 0;
+                }else{
+                    epllabc = 2;
+                }
+                if(clab == 0){
+                    clabc = 0;
+                }
+                else{
+                    clabc = 2;
+                }
+                var grade = eng*4+mat*3+phy*3+evs*3+c*3+beee*4+epllab*2+clab*2;
+                const credit = engc+matc+phyc+evsc+cc+beeec+clabc+epllabc;
+                var cgpa = (Math.round(grade/credit*100)/100);
+                document.getElementById("gpa").innerHTML = "GPA is " + cgpa;
+                }
+            
+            </script>
+    </head>
+    <body>
+        <div class="whole">
+        <h1 class="Calculator">GPA Calculator</h1>
+            <div class="navbar" id="myTopnav">
+            <a href="index.html" class="home">Home</a>
+            <div class="right">
+            <a href="gpa.html" style="background-color: rgb(36,182,7);">GPA</a>
+            <a href="cgpa.html">CGPA</a>
+            <a href="credit.html">Credits</a>
+            </div>
+          </div>
+    <h3 style="text-align: center;">Second Semester GPA Calculation(Aeronautical Engineering)</h3>
+    <div class="courses">
+        <p>HS8251-Technical English</p>
+        <select id="eng">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>MA8251-Engineering Mathematics 2</p>
+        <select id="mat">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>PH8251-Materials Science</p>
+        <select id="phy">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>BE8253-Basic Electrical,Electronics and Instrumentation Engineering</p>
+        <select id="beee">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>GE8291-Environmental Science and Engineering</p>
+        <select id="evs">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>GE8292-Engineering Mechanics</p>
+        <select id="c">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>GE8261-Engineering Practices Laboratory</p>
+        <select id="epllab">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>BE8261-Basic Electrical,Electronics and Instrumentation Engineering Laboratory</p>
+        <select id="clab">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select><br>
+        <button type="button" class="submit" onclick="display()">Submit</button>
+        <h6 id ="gpa"></h6>
+        </div>
+        </div>
+        <h5 class="footer">Copyright © 2020 - Selvi</h5>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    font-family: Calibri;
+    background-color: rgb(221, 215, 215);
+}
+.whole{
+    background-color: white;
+    margin: 3% 10%;
+    padding: 5px 0px;
+}
+.footer{text-align: center;background-color: lawngreen;margin: 0px;padding: 4px;width: 100%;}
+.foot{text-align: center;background-color: lawngreen;margin: 0px;padding: 4px;position: fixed;bottom: 0;width: 100%;}
+.calculator{
+    background-color: rgb(112, 243, 243);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
+.navbar a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: rgb(2, 1, 1);
+    color: rgb(226, 226, 221);
+}
+.navbar{
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px 0px;
+    background-color: #3b3b3b;
+    overflow: hidden;
+}
+.right{
+    float: right;
+}
+
+#semselect{
+  border: 1px solid cadetblue;
+  border-radius: 3px;
+  border-style: groove;
+  padding: 5px;
+  width: 80%;
+  margin: 35px auto;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.semester{  
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  text-align: center;
+  padding: 15px 0px;
+}
+.row span{
+  width: 45%;
+  margin: 15px auto;
+  flex: 1;
+} 
+
+a.sem1,a.sem2,a.sem3{
+padding: 0.5rem 2.5rem;
+text-decoration: none;
+color: black;
+text-align: center;
+-webkit-box-shadow: inset 2px 2px 2px 2px #1C6EA4, inset 11px 11px 2px 0px #2285C7, inset 20px 20px 2px 1px #289DEA, inset 29px 29px 2px 1px #57BBEA, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: inset 2px 2px 2px 2px #1C6EA4, inset 11px 11px 2px 0px #2285C7, inset 20px 20px 2px 1px #289DEA, inset 29px 29px 2px 1px #57BBEA, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar .icon {
+    display: none;
+  }
+@media screen and (max-width: 600px) {
+  .row{
+    flex-direction: column;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .row span{
+    width: 100%;
+  }
+  .row:first-child{
+    padding-top: 15px;
+  }
+  .whole{
+    margin: 3%;
+  }
+}

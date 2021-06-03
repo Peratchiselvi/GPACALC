@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>GPA,CGPA Calculation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="sem1.css">
+        <script>
+        function sem2csec(){
+           let credit1 = document.getElementById("credit1").value;
+            let gpa1 = document.getElementById("gpa1").value;
+            let credit2 = document.getElementById("credit2").value;
+            let gpa2 = document.getElementById("gpa2").value;
+            let gpa = credit1*gpa1+credit2*gpa2;
+            let credit = Number(credit1)+Number(credit2);
+            const cgpa = gpa/credit;
+            document.getElementById("gpa").innerHTML="CGPA is "+ Math.floor(cgpa*100)/100;
+        }
+        </script>
+    </head>
+    <body>
+        <div class="whole">
+        <h1 class="Calculator">GPA Calculator</h1>
+            <div class="navbar" id="myTopnav">
+            <a href="index.html" class="home">Home</a>
+            <div class="right">
+            <a href="gpa.html">GPA</a>
+            <a href="cgpa.html" style="background-color: rgb(36,182,7);">CGPA</a>
+            <a href="credit.html">Credits</a>
+            </div>
+          </div>
+        <h3 style="text-align: center;">CGPA Calculation(Aeronautical Engineering)</h3>
+        <div class="creditcal" style="margin: 1rem 3rem;">
+<form>
+        <p style="margin: 1rem;line-height: 1.5rem;"><b>NOTE:</b> If you have any arrears, the Credits that earned in that particular subject(arrear) is zero so subtract
+        the credits corresponding to that subject from the total credits for that semester which is given below.Then 
+        calculate your CGPA. To know the credits <a href="sem2credit.html" style="text-decoration: none;color:magenta;"><b>Click here</b></a></p>
+    <h3>Semester 1</h3>
+    <label for="credit1">Credits Earned:</label>
+    <input type="text" id="credit1" value="25"><br><br>
+    <label for="gpa1">GPA:</label>
+    <input type="text" id="gpa1"><br><br>
+    <h3>Semester 2</h3>
+    <label for="credit2">Credits Earned:</label>
+    <input type="text" id="credit2" value="25"><br><br>
+    <label for="gpa2">GPA:</label>
+    <input type="text" id="gpa2"><br><br>
+    <button type="button" class="submit" onclick="sem2csec()">Submit</button>
+    <p id="gpa"></p>
+  </form>
+  </div>
+  </div>
+  <h5 class="footer">Copyright © 2020 - Selvi</h5>
+  </body>
+  </html>

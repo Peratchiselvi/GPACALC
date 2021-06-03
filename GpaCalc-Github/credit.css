@@ -1,0 +1,50 @@
+@import "gpa.css";
+.divTable{
+	display: table;
+	width: 80%;
+	border: 9px solid #000;
+	margin: 3% auto;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 0.5rem 2rem;
+}
+.divTableCell1{
+	border: 1px solid #999999;
+	display: table-cell;
+    padding: 0.5rem 0.9rem;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+	text-align: center;
+}
+.semcredit{
+	margin: 0.5rem 2rem;-webkit-box-shadow: inset -1px 3px 8px 5px rgb(126, 49, 250), 2px 5px 16px 0px rgb(101, 17, 236), 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px rgb(108, 10, 199), 2px 5px 16px 0px rgb(112, 22, 196), 5px 5px 15px 5px rgba(0,0,0,0);
+}
+@media screen and (max-width: 780px) {
+	.divTableCell, .divTableHead {
+		padding: 0.5rem 1rem;
+	}
+	.semcredit{
+		margin: 0.5rem 4.5rem;
+	}
+}

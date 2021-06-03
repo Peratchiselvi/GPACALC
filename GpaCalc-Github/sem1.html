@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Semester 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="sem1.css">
+        <script>            
+            function display(){
+            let eng = document.getElementById("english").value;
+            let mat = document.getElementById("maths").value;
+            let phy = document.getElementById("physics").value;
+            let che = document.getElementById("chemistry").value;
+            let pyt = document.getElementById("python").value;
+            let eg = document.getElementById("eg").value;
+            let pclab = document.getElementById("pclab").value;
+            let pylab = document.getElementById("pylab").value;
+            if(eng==0){
+                engc = 0;
+            }
+            else{
+                engc = 4;
+            }
+                if(mat == 0){
+                matc = 0;
+            }else{
+                matc = 4;
+            }
+            if(phy == 0){
+                phyc = 0;
+            }
+            else{
+                phyc = 3;
+            }
+            if(che == 0){
+                chec = 0;
+            }
+            else{
+                chec = 3;
+            }
+            if(pyt == 0){
+                pytc = 0;
+            }else{
+                pytc = 3;
+            }
+            if(eg == 0){
+                egc = 0;
+            }else{
+                egc = 4;
+            }
+            if(pclab == 0){
+                pclabc = 0;
+            }
+            else{
+                pclabc = 2;
+            }
+            if(pylab == 0){
+                pylabc = 0;
+            }else{
+                pylabc = 2;
+            }
+            var grade = eng*4+mat*4+phy*3+che*3+pyt*3+eg*4+pclab*2+pylab*2;
+            const credit = engc+matc+phyc+chec+pytc+egc+pclabc+pylabc;
+            var cgpa = (Math.round(grade/credit*100)/100);
+            document.getElementById("gpa").innerHTML = "GPA is " + cgpa;
+            }
+        
+        </script>
+    </head>
+    <body>
+        <div class="whole">
+        <h1 class="Calculator">GPA Calculator</h1>
+            <div class="navbar" id="myTopnav">
+            <a href="index.html" class="home">Home</a>
+            <div class="right">
+            <a href="gpa.html" style="background-color: rgb(36,182,7);">GPA</a>
+            <a href="cgpa.html">CGPA</a>
+            <a href="credit.html">Credits</a>
+            </div>
+            </div>
+    <h3 style="text-align: center;">First Semester GPA Calculation</h3>
+        <div class="courses">
+        <p>HS8151-Communicative English</p>
+        <select id="english">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>MA8151-Engineering Mathematics-1</p>
+        <select id="maths">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>PH8151-Engineering Physics</p>
+        <select id="physics">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>CY8151-Engineering Chemistry</p>
+        <select id="chemistry">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select>
+        <p>GE8151-Problem Solving and Python Programming</p>
+        <select id="python">
+                <option>Choose</option>
+                <option value=10>O</option>
+                <option value=9>A+</option>
+                <option value=8>A</option>
+                <option value=7>B+</option>
+                <option value=6>B</option>
+                <option value=0>U</option>
+        </select>
+        <p>GE8152-Engineering Graphics</p>
+        <select id="eg">
+                <option>Choose</option>
+                <option value=10>O</option>
+                <option value=9>A+</option>
+                <option value=8>A</option>
+                <option value=7>B+</option>
+                <option value=6>B</option>
+                <option value=0>U</option>
+        </select>
+        <p>BS8161-Physics and Chemistry Laboratory</p>
+        <select id="pclab">
+                <option>Choose</option>
+                <option value=10>O</option>
+                <option value=9>A+</option>
+                <option value=8>A</option>
+                <option value=7>B+</option>
+                <option value=6>B</option>
+                <option value=0>U</option>
+        </select>
+        <p>GE8161-Problem Solving and Python Programming Laboratory</p>
+        <select id="pylab">
+            <option>Choose</option>
+            <option value=10>O</option>
+            <option value=9>A+</option>
+            <option value=8>A</option>
+            <option value=7>B+</option>
+            <option value=6>B</option>
+            <option value=0>U</option>
+        </select><br>
+        <button type="button" class="submit" onclick="display()">Submit</button>
+        <h6 id ="gpa"></h6>
+        </div>
+        </div>
+        <h5 class="footer">Copyright © 2020 - Selvi</h5>
+        </body>
+</html>
